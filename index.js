@@ -1,8 +1,8 @@
 class ProductManager {
     
     constructor(){
-        this.products = [];
-        this.countId = 0;
+        this.products = []
+        this.countId = 0
     }
 
    
@@ -46,7 +46,7 @@ class ProductManager {
      //Metodo para obtener lista de productos
      getProducts() 
      {
-        return this.products;
+        return this.products
      }
 
      //Metodo para buscar en el arreglo un producto por id
