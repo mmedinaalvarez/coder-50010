@@ -1,4 +1,6 @@
 const { promises } = require("fs");
+const { describe } = require("node:test");
+const { title } = require("process");
 const fs = promises;
 
 class ProductManager {
@@ -10,15 +12,17 @@ class ProductManager {
 
   //Metodo para agregar productos
 
-  async addProducts(title, description, price, thumbnail, code, stock) {
+  async addProduct(productData) {
+    const { title, description, price, thumbnail, code, stock } = productData;
+    // const { title, description, price, thumbnail, code, stock } = productData;
     //Compruebo que se llenen todos los campos
     if (
-      title === "" ||
-      description === "" ||
-      price === "" ||
-      thumbnail === "" ||
-      code === "" ||
-      stock === ""
+      productData.title === "" ||
+      productData.description === "" ||
+      productData.price === "" ||
+      productData.thumbnail === "" ||
+      productData.code === "" ||
+      productData.stock === ""
     ) {
       console.log("Todos los campos son obligatorios, llenelos.");
       return;
@@ -26,7 +30,9 @@ class ProductManager {
 
     //Compruebo que no se repita el code
 
-    const foundCode = this.products.find((product) => product.code === code);
+    const foundCode = this.products.find(
+      (product) => product.code === productData.code
+    );
     if (foundCode) {
       console.error("Ya existe un producto con ese code");
       return;
@@ -137,40 +143,40 @@ main();
 async function main() {
   console.log(await productManager1.getProducts());
 
-  await productManager1.addProducts(
-    "Producto prueba",
-    "Este es un producto de prueba",
-    200,
-    "Sin imagen",
-    "abc123",
-    25
-  );
+  await productManager1.addProduct({
+    title: "Producto prueba",
+    description: "Este es un producto de prueba",
+    price: 200,
+    thumbnail: "Sin imagen",
+    code: "abc123",
+    stock: 25,
+  });
   console.log(await productManager1.getProducts());
 
-  await productManager1.addProducts(
-    "Producto prueba 2",
-    "Este es un producto de prueba 2",
-    300,
-    "Sin imagen2",
-    "abc456",
-    26
-  );
-  await productManager1.addProducts(
-    "Producto prueba 3",
-    "Este es un producto de prueba 3",
-    300,
-    "Sin imagen3",
-    "abc457",
-    26
-  );
-  await productManager1.addProducts(
-    "Producto prueba 4",
-    "Este es un producto de prueba 4",
-    300,
-    "Sin imagen4",
-    "abc458",
-    26
-  );
+  await productManager1.addProduct({
+    title: "Producto prueba 2",
+    description: "Este es un producto de prueba 2",
+    price: 300,
+    thumbnail: "Sin imagen2",
+    code: "abc456",
+    stock: 26,
+  });
+  await productManager1.addProduct({
+    title: "Producto prueba 3",
+    description: "Este es un producto de prueba 3",
+    price: 300,
+    thumbnail: "Sin imagen3",
+    code: "abc457",
+    stock: 26,
+  });
+  await productManager1.addProduct({
+    title: "Producto prueba 4",
+    description: "Este es un producto de prueba 4",
+    price: 300,
+    thumbnail: "Sin imagen4",
+    code: "abc458",
+    stock: 26,
+  });
 
   await productManager1.getProductById(1);
   await productManager1.updateProduct(7);
