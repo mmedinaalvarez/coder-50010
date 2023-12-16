@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "title": "Producto prueba",
+    "description": "Este es un producto de prueba",
+    "price": 200,
+    "thumbnail": "Sin imagen",
+    "code": "abc123",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "title": "Producto Actualizado",
+    "description": "Este es un producto de prueba 3",
+    "price": 300,
+    "thumbnail": "Sin imagen3",
+    "code": "abc457",
+    "stock": 26
+  },
+  {
+    "id": 3,
+    "title": "Producto prueba 4",
+    "description": "Este es un producto de prueba 4",
+    "price": 300,
+    "thumbnail": "Sin imagen4",
+    "code": "abc328",
+    "stock": 26
+  },
+  {
+    "id": 4,
+    "title": "Producto prueba 5",
+    "description": "Este es un producto de prueba 5",
+    "price": 300,
+    "thumbnail": "Sin imagen5",
+    "code": "abc408",
+    "stock": 26
+  },
+  {
+    "id": 5,
+    "title": "Producto prueba 6",
+    "description": "Este es un producto de prueba 6",
+    "price": 300,
+    "thumbnail": "Sin imagen6",
+    "code": "abc4108",
+    "stock": 26
+  },
+  {
+    "id": 6,
+    "title": "Producto prueba 7",
+    "description": "Este es un producto de prueba 7",
+    "price": 300,
+    "thumbnail": "Sin imagen7",
+    "code": "abc108",
+    "stock": 26
+  },
+  {
+    "id": 7,
+    "title": "Producto Actualizado",
+    "description": "Este es un producto de prueba 8",
+    "price": 300,
+    "thumbnail": "Sin imagen8",
+    "code": "abc428",
+    "stock": 26
+  },
+  {
+    "id": 9,
+    "title": "Producto prueba 10",
+    "description": "Este es un producto de prueba 10",
+    "price": 300,
+    "thumbnail": "Sin imagen10",
+    "code": "def14",
+    "stock": 26
+  },
+  {
+    "id": 10,
+    "title": "Producto prueba 11",
+    "description": "Este es un producto de prueba 11",
+    "price": 300,
+    "thumbnail": "Sin imagen11",
+    "code": "def13",
+    "stock": 26
+  },
+  {
+    "id": 11,
+    "title": "Producto prueba 12",
+    "description": "Este es un producto de prueba 12",
+    "price": 300,
+    "thumbnail": "Sin imagen12",
+    "code": "def12",
+    "stock": 26
+  }
+]
