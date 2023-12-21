@@ -5,7 +5,7 @@
   "name": "coder-50010",
   "description": "Entrega 3.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
